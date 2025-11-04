@@ -11,8 +11,8 @@
 
 ```
 === Summary Statistics ===
-Majority-win Toxic:  11,995
-Majority-win Normal: 8,153
+Majority-win Toxic:  12,334
+Majority-win Normal: 7,814
 Pure Toxic:          8,637
 Pure Normal:         5,124
 ```
