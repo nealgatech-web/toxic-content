@@ -40,8 +40,9 @@ for example_id, content in data.items():
         continue
 
     # Determine majority toxicity
-    majority_label = Counter(labels).most_common(1)[0][0]
-    is_toxic = "toxic" if majority_label in ("hatespeech", "offensive") else "normal"
+    toxic_count = sum(l in ("hatespeech", "offensive") for l in labels)
+    normal_count = sum(l == "normal" for l in labels)
+    is_toxic = "toxic" if toxic_count > normal_count else "normal"
 
     # Track stats
     if is_toxic == "toxic":
