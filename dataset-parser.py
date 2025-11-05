@@ -68,7 +68,7 @@ for example_id, content in data.items():
 
 # Determine header dynamically
 max_annotators = max((len(r) - 3) // 3 for r in rows)
-header = ["Text1", "Text2", "IsToxic"]
+header = ["Text1", "text", "text_type"]
 for i in range(1, max_annotators + 1):
     header.extend([f"Label{i}", f"Annotator_id{i}", f"Target{i}"])
 
